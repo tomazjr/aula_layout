@@ -1,3 +1,4 @@
+import 'package:aula_layout/ui/second_layout_screen.dart';
 import 'package:aula_layout/ui/widgets/button_section_widget.dart';
 import 'package:aula_layout/ui/widgets/image_section_widget.dart';
 import 'package:aula_layout/ui/widgets/text_section_widget.dart';
@@ -20,6 +21,15 @@ class LayoutScreen extends StatelessWidget {
           ButtonSectionWidget(),
           TextSectionWidget(),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const SecondLayoutScreen(),
+          ),
+        ),
+        child: const Icon(Icons.navigate_next),
       ),
     );
   }
